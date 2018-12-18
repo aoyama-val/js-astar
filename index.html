@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A*アルゴリズムの実装</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="astar.js"></script>
+
+  <style>
+    #map table {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+    }
+    #map table td, th {
+      border: 1px solid #ccc;
+      width: 130px;
+      height: 130px;
+      text-align: center;
+    }
+  </style>
+
+  <script>
+    $(function() {
+      renderer.render('#map');
+    });
+
+    function step_onclick() {
+      map.step();
+      renderer.render('#map');
+    }
+  </script>
+</head>
+<body>
+  <h1>A*アルゴリズムの実装</h1>
+  <button onclick="step_onclick()">1ステップ進める</button>
+  ステップ: <span id="step"></span>
+  <div id="map">
+  </div>
+  <div>
+    参考：<a href="https://qiita.com/2dgames_jp/items/f29e915357c1decbc4b7">よくわかるA*(A-star)アルゴリズム </a>
+  </div>
+</body>
+</html>
+<!-- vim: set ts=2 sts=2 sw=2 expandtab list: -->
