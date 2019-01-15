@@ -101,7 +101,7 @@ class Map {
     this.head = nextHead;
     console.log("head", this.head);
 
-    if (this.head.position.x == this.goalPos.x && this.head.position.y == this.goalPos.y) {
+    if (this.head.isEqual(this.goalPos)) {
       // ゴール到達！
       alert("発見！");
       var routeIndex = 0;
